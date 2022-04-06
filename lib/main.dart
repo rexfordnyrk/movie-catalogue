@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:movie_catalogue/page_layout.dart';
+import 'package:movie_catalogue/layout.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const TheMovieCatalogue());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class TheMovieCatalogue extends StatelessWidget {
+  const TheMovieCatalogue({Key? key}) : super(key: key);
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PageLayout(),
+      home: const Scaffold(
+        body: AppLayout(),
+      ),
     );
   }
 }
